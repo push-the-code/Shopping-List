@@ -10,12 +10,13 @@ def shopping_list ():
         item_list = {key:val}
         shop_list.append(item_list)
     print("\n________________________________________")
-    print("\n\tYour Shopping List\n\nNo. \t Items \t \tQuantity\n")
+    print("\n\tYour Shopping List\n\n")
+    print("No. \t Items \t \t Quantity\n")
     for i, item_list in enumerate(shop_list):
         for key, value in item_list.items():
-            print("%d \t" %(i+1), "%s\t" %key, "\t%s\t" %value)
-            print("\n________________________________________")
+            print("%d " %(i+1), "\t %s\t" %key, "\t %s   " %value)
         print()
+    print("\n________________________________________")
 
     
 def main():
