@@ -1,6 +1,7 @@
 item_list = {}
 shop_list = []
 
+
 def shopping_list ():
     cart = int(input("Enter how many items do you want to add to your shopping cart:"))
     print("Enter %d items in your cart"%cart, end="\n")
@@ -18,16 +19,20 @@ def shopping_list ():
             print("%d " %(i+1), "\t %s " %key, "\t\t%s" %value)
         print()
     print("_"*50)
-
-    
-def main():
+        
+def main ():
     while True:
-        shopping_list()
-        ch = input("\nDo you want add more items?")
-        if ch == "Yes" or ch == "yes":
+        try:
             shopping_list()
-            break
-        else:
-            break
+            ch = input("\nDo you want add more items? (Yes/No):")
+            if ch == "Yes" or ch == "yes":
+                shopping_list()
+                break
+            else:
+                break
+            
+        except ValueError:
+            print("Please enter value in number only!\n\n")
+            pass
     
-main()
+main ()
